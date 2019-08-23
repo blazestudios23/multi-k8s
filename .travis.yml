@@ -14,7 +14,7 @@ after_success:
   - docker build -t blazestudios23/multi-worker ./worker
   # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take those images
+  # Take those images and push to docker hub
   - docker push blazestudios23/multi-client
   - docker push blazestudios23/multi-nginx
   - docker push blazestudios23/multi-server
